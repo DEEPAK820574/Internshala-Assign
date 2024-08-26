@@ -2,32 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* globals.css */
+.border-bottom-dashed-short {
+    border-bottom: 1px dashed transparent; /* Base style for dashes */
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-image: repeating-linear-gradient(
+      to right,
+      rgba(98, 195, 198, 0.3) 0%,
+      rgba(98, 195, 198, 0.3) 6px, /* Dash length (4px) */
+      transparent 4px,
+      transparent 11px /* Dash + gap length (approx 6.1px) */
+    ) 1;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  
