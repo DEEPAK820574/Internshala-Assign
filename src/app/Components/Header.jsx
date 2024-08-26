@@ -1,5 +1,5 @@
 import React from 'react'
-import NavContainer from './Navbar/navContainer'
+import NavContainer from './Navbar/NavContainer'
 const Header = () => {
   return (
     <div>
